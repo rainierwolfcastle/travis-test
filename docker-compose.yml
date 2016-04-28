@@ -1,2 +1,4 @@
-pytest:
-    build: .
+version: '2'
+services:
+    pytest:
+        build: .
