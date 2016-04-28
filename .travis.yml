@@ -5,5 +5,7 @@ services:
 cache: pip
 install: pip install docker-compose
 script:
-    - docker build .
+    - docker-compose build
+    - docker-compose run --rm pytest cat 123
+    - echo $?
     - docker rmi $(docker images -q)
